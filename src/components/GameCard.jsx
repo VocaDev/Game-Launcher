@@ -6,14 +6,14 @@ const GameCard = ({game}) => {
         <Card className='h-100 shadow-sm'>
             <Card.Img
             variant='top'
-            src={`https://via.placeholder.com/300x180?text=${game.title}`}
+            src={game.image}
             alt={game.title}
+            style={{height: "200px", objectFit: "cover"}}
             />
             <Card.Body>
                 <Card.Title>{game.title}</Card.Title>
-                <Card.Text className='text-muted'>
-                    {game.genre}
-                </Card.Text>
+                <Card.Text>{game.genre}</Card.Text>
+                <button variant="primary">Play</button>
             </Card.Body>
         </Card>
      );
